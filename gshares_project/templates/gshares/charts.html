@@ -1,0 +1,70 @@
+{% extends 'gshares/base.html' %}
+
+{% load static %}
+
+{% block title %}Charts{% endblock %}
+
+{% block content %}
+
+<head>
+	<link href="{% static 'css/main2.css' %}" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans Narrow:400,700"> -->
+	<link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+</head>
+
+<!-- scrolling ticker http://www.macroaxis.com/invest/widgets/native/stockTicker&s=aero,%20agtk,%20attbf,%20cbis,%20cgrw,%20edxc,%20enrt,%20erbb,%20fitx,%20grcu,%20grnh,%20hemp,%20imlff,%20mcig,%20mdbx,%20mjmj,%20mjna,%20mjne,%20mntr,%20myec,%20nvlx,%20phot,%20pmcm,%20qedn,%20rssff,%20sprwf,%20srna,%20stev,%20taug,%20thcz,%20trtc,%20turv,%20upot,%20vapo,%20vpor -->
+<script src="http://widgets.macroaxis.com/widgets/url.jsp?t=42&s=aero, agtk, attbf, cbis, cgrw, edxc, enrt, erbb, fitx, grcu, grnh, hemp, imlff, mcig, mdbx, mjmj, mjna, mjne, mntr, myec, nvlx, phot, pmcm, qedn, rssff, sprwf, srna, stev, taug, thcz, trtc, turv, upot, vapo, vpor"></script>
+
+<h1><strong>Charting></strong></h1>
+
+<div class="box-set">
+
+	<div class="leftover" style="margin-top: 0%;">
+		<h3>Ticker List></h3>
+		<ul>
+			<li>|<a href="/gshares/AERO/">AERO</a>|<a href="/gshares/AGTK/">AGTK</a>|<a href="/gshares/ATTBF/">ATTBF</a>|<a href="/gshares/AVTC/">AVTC</a>|</li>
+			<li>|<a href="/gshares/BRDT/">BRDT</a>|<a href="/gshares/CANL/">CANL</a>|<a href="/gshares/CANV/">CANV</a>|<a href="/gshares/CBDS/">CBDS</a>|</li>
+			<li>|<a href="/gshares/CBGI/">CBGI</a>|<a href="/gshares/CBIS/">CBIS</a>|<a href="/gshares/CGRW/">CGRW</a>|<a href="/gshares/CHUM/">CHUM</a>|</li>
+			<li>|<a href="/gshares/CNBX/">CNBX</a>|<a href="/gshares/EAPH/">EAPH</a>|<a href="/gshares/EDXC/">EDXC</a>|<a href="/gshares/ENDO/">ENDO</a>|</li>
+			<li>|<a href="/gshares/ENRT/">ENRT</a>|<a href="/gshares/ERBB/">ERBB</a>|<a href="/gshares/FITX/">FITX</a>|<a href="/gshares/FULL/">FULL</a>|</li>
+			<li>|<a href="/gshares/FWDG/">FWDG</a>|<a href="/gshares/GBLX/">GBLX</a>|<a href="/gshares/GRCU/">GRCU</a>|<a href="/gshares/GRNH/">GRNH</a>|</li>
+			<li>|<a href="/gshares/GWPH/">GWPH</a>|<a href="/gshares/HEMP/">HEMP</a>|<a href="/gshares/HMKTF/">HMKTF</a>|<a href="/gshares/ICBU/">ICBU</a>|</li>
+			<li>|<a href="/gshares/IMLFF/">IMLFF</a>|<a href="/gshares/LGBI/">LGBI</a>|<a href="/gshares/LVVV/">LVVV</a>|<a href="/gshares/MCIG/">MCIG</a>|</li>
+			<li>|<a href="/gshares/MDBX/">MDBX</a>|<a href="/gshares/MDCN/">MDCN</a>|<a href="/gshares/MJMJ/">MJMJ</a>|<a href="/gshares/MJNA/">MJNA</a>|</li>
+			<li>|<a href="/gshares/MJNE/">MJNE</a>|<a href="/gshares/MNTR/">MNTR</a>|<a href="/gshares/MYEC/">MYEC</a>|<a href="/gshares/NDEV/">NDEV</a>|</li>
+			<li>|<a href="/gshares/NTRR/">NTRR</a>|<a href="/gshares/NVLX/">NVLX</a>|<a href="/gshares/PHOT/">PHOT</a>|<a href="/gshares/PLPL/">PLPL</a>|</li>
+			<li>|<a href="/gshares/PMCM/">PMCM</a>|<a href="/gshares/QEDN/">QEDN</a>|<a href="/gshares/REFG/">REFG</a>|<a href="/gshares/RSSFF/">RSSFF</a>|</li>
+			<li>|<a href="/gshares/SING/">SING</a>|<a href="/gshares/SPRWF/">SPRWF</a>|<a href="/gshares/SRNA/">SRNA</a>|<a href="/gshares/STEV/">STEV</a>|</li>
+			<li>|<a href="/gshares/TAUG/">TAUG</a>|<a href="/gshares/THCZ/">THCZ</a>|<a href="/gshares/TRTC/">TRTC</a>|<a href="/gshares/TURV/">TURV</a>|</li>
+			<li>|<a href="/gshares/UPOT/">UPOT</a>|<a href="/gshares/VAPO/">VAPO</a>|<a href="/gshares/VPOR/">VPOR</a>|<a href="/gshares/VAPE/">VAPE</a>|</li>
+		</ul>
+	</div>
+
+
+
+
+<div class="chart">
+<!-- TradingView Widget BEGIN -->
+<script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+<script type="text/javascript">
+new TradingView.widget({
+  "width": 998,
+  "height": 610,
+  "symbol": "OTC:AERO",
+  "interval": "D",
+  "timezone": "exchange",
+  "theme": "White",
+  "style": "1",
+  "toolbar_bg": "#f1f3f6",
+  "withdateranges": true,
+  "allow_symbol_change": true,
+  "hideideas": true,
+  "show_popup_button": true,
+  "popup_width": "1000",
+  "popup_height": "650"
+});
+</script>
+<!-- TradingView Widget END -->
+</div>
+</div>	
+{% endblock content %}

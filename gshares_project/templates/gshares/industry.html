@@ -1,0 +1,51 @@
+{% extends 'gshares/base.html' %}
+
+{% load static %}
+
+{% block title %}Industry News{% endblock %}
+
+{% block content %}
+
+<head>
+	<link href="{% static 'css/main2.css' %}" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans Narrow:400,700"> -->
+	<link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+</head>
+
+<h1>Industry News></h1>	
+
+<div class="box-set">
+	<div class="leftover-main3" style="margin-top: -5%;">
+		<form action="//ganjashares.us9.list-manage.com/subscribe/post?u=e6cef1a59171c455df64b7b7b&amp;id=01020ec11b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+   
+			<label for="mce-EMAIL"><strong>Get on Our Mail List></strong></label>
+			<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    		<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    		<div style="position: absolute; left: -5000px;"><input type="text" name="b_e6cef1a59171c455df64b7b7b_01020ec11b" tabindex="-1" value=""></div>
+    		<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+  		</form>
+	</div>
+	<div class="leftover">
+		<h3>News Links></h3>
+		<ul>
+			<li><a href="http://mmjbusinessdaily.com/">Marijuana Business Daily</a></li>
+			<li><a href="http://www.sciencedaily.com/news/mind_brain/marijuana/">ScienceDaily</a></li>				
+			<li><a href="http://www.thedailychronic.net/">The Daily Chronic</a></li>
+			<li><a href="http://www.420magazine.com/">420Magazine</a></li>
+		</ul>
+	</div>
+	
+	<div class="container-news_other">	
+	<h3 style="padding-left: 2%; font-family: 'Titillium Web', sans-serif;">Top Headlines as of {{ time }}</h3>
+	<ul>
+		{% for item in lists %}
+		<li><a href="{{ item.1 }}"><strong>{{ item.0 }}</strong></a></li>
+		<li>{{ item.3 }}</li>
+		<li><strong><em style="font-size: 9px;">{{ item.2 }}</em></strong></li>
+		<br>
+		{% endfor %}
+	</ul>
+	</div>
+</div>	
+
+{% endblock content %}

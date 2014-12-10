@@ -1,0 +1,48 @@
+{% extends 'gshares/base.html' %}
+
+{% load static %}
+
+{% block title %}News{% endblock %}
+
+{% block content %}
+
+<head>
+	<link href="{% static 'css/main2.css' %}" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans Narrow:400,700"> -->
+	<link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+</head>
+
+
+<!-- scrolling ticker http://www.macroaxis.com/invest/widgets/native/stockTicker&s=aero,%20agtk,%20attbf,%20cbis,%20cgrw,%20edxc,%20enrt,%20erbb,%20fitx,%20grcu,%20grnh,%20hemp,%20imlff,%20mcig,%20mdbx,%20mjmj,%20mjna,%20mjne,%20mntr,%20myec,%20nvlx,%20phot,%20pmcm,%20qedn,%20rssff,%20sprwf,%20srna,%20stev,%20taug,%20thcz,%20trtc,%20turv,%20upot,%20vapo,%20vpor -->
+<!--<script src="http://widgets.macroaxis.com/widgets/url.jsp?t=42&s=aero, agtk, attbf, cbis, cgrw, edxc, enrt, erbb, fitx, grcu, grnh, hemp, imlff, mcig, mdbx, mjmj, mjna, mjne, mntr, myec, nvlx, phot, pmcm, qedn, rssff, sprwf, srna, stev, taug, thcz, trtc, turv, upot, vapo, vpor"></script>
+-->
+
+<h1 style="margin-right: 2%;">Stock News></h1>	
+<div class="box-set">
+
+	<div class="leftover-main3" style="margin-top: -5%;">
+		<form action="//ganjashares.us9.list-manage.com/subscribe/post?u=e6cef1a59171c455df64b7b7b&amp;id=01020ec11b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+   
+			<label for="mce-EMAIL"><strong>Get on Our Mail List></strong></label>
+			<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    		<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    		<div style="position: absolute; left: -5000px;"><input type="text" name="b_e6cef1a59171c455df64b7b7b_01020ec11b" tabindex="-1" value=""></div>
+    		<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+  		</form>
+	</div>
+	
+<div class="container-news">
+	<h3 style="padding-left: 2%;font-family: 'Titillium Web', sans-serif;">Top Headlines as of {{ time }}</h3>	
+	<ul>
+	{% for item in lists %}
+		<li><a href="{{ item.1 }}"><strong>{{ item.0 }}</strong></a></li>
+		<li>{{ item.3 }}</li>
+		<li><strong><em style="font-size: 9px;">{{ item.2 }}</em></strong></li>
+		<br>
+	{% endfor %}
+	</ul>
+</div>
+</div>
+	
+		
+{% endblock content %}

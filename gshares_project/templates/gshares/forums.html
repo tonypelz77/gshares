@@ -1,0 +1,21 @@
+{% extends 'gshares/base.html' %}
+
+{% load static %}
+
+{% block title %}Forums{% endblock %}
+
+{% block content %}
+
+<head>
+	<link href="{% static 'css/main2.css' %}" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans Narrow:400,700"> -->
+	<link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+</head>
+
+<h1><strong>Forums></strong></h1>
+
+<div class="forum">
+	<iframe src="http://tapelz.forumchitchat.com/" width="100%" height="600"></iframe>
+</div>
+
+{% endblock content %}

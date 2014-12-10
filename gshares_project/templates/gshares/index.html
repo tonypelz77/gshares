@@ -1,0 +1,127 @@
+{% extends 'gshares/base.html' %}
+
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<head>
+	<link href="{% static 'css/main2.css' %}" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans Narrow:400,700"> -->
+	<link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+</head>
+
+<!-- scrolling ticker http://www.macroaxis.com/invest/widgets/native/stockTicker&s=aero,%20agtk,%20attbf,%20cbis,%20cgrw,%20edxc,%20enrt,%20erbb,%20fitx,%20grcu,%20grnh,%20hemp,%20imlff,%20mcig,%20mdbx,%20mjmj,%20mjna,%20mjne,%20mntr,%20myec,%20nvlx,%20phot,%20pmcm,%20qedn,%20rssff,%20sprwf,%20srna,%20stev,%20taug,%20thcz,%20trtc,%20turv,%20upot,%20vapo,%20vpor -->
+<script src="http://widgets.macroaxis.com/widgets/url.jsp?t=42&s=aero, agtk, attbf, cbis, cgrw, edxc, enrt, erbb, fitx, grcu, grnh, hemp, imlff, mcig, mdbx, mjmj, mjna, mjne, mntr, myec, nvlx, phot, pmcm, qedn, rssff, sprwf, srna, stev, taug, thcz, trtc, turv, upot, vapo, vpor"></script>
+
+<div class="box-set">
+
+	<div class="leftover-main">
+		<h3 style="padding-left: 2%;"><img src="{% static 'img/ganjasharestwitterlogo3.png' %}" style="width: 20px; height: 20px;"> GanjaShares></h3>
+		
+		<p style="font-size: 10px; padding-left: 2%; padding-right: 2%; text-align: justify;">Founded and based in the Mile High City of Denver, Colorado, GanjaShares is at the epicenter of 
+		the emerging and high growth marijuana industry. <a href="/gshares/about/">Learn more.</a></p>
+	</div>
+	
+	<div class="leftover-main3">
+		<form action="//ganjashares.us9.list-manage.com/subscribe/post?u=e6cef1a59171c455df64b7b7b&amp;id=01020ec11b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+   
+			<label for="mce-EMAIL"><strong>Get on Our Mail List></strong></label>
+			<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    		<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    		<div style="position: absolute; left: -5000px;"><input type="text" name="b_e6cef1a59171c455df64b7b7b_01020ec11b" tabindex="-1" value=""></div>
+    		<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+  		</form>
+	</div>
+	
+		<div class="leftover-main2">
+		<h3 style="padding-left: 2%;">Marijuana Stock Quotes></h3>
+		
+		<!-- Start FreeStockCharts.com WatchList Widget --><p width="100%" align="center"><iframe width="220" height="1250" scrolling="no" frameborder="0" style="border:none;" src="http://widgets.freestockcharts.com/WidgetServer/WatchListWidget.aspx?sym=AERO,AGTK,ATTBF,AVTC,BRDT,CANL,CANV,CBDS,CBGI,CBIS,CGRW,CHUM,CNBX,EAPH,EDXC,ENDO,ENRT,ERBB,FITX,FULL,FWDG,GBLX,GRCU,GRNH,GWPH,HEMP,HMKTF,ICBU,IMLFF,LGBI,LVVV,MCIG,MDBX,MDCN,MJMJ,MJNA,MJNE,MNTR,MYEC,NDEV,NTRR,NVLX,PHOT,PLPL,PMCM,QEDN,REFG,RSSFF,SING,SPRWF,SRNA,STEV,TAUG,THCZ,TRTC,TURV,UPOT,VAPO,VPOR,VAPE&style=WLStyleWhite&w=200"></iframe></p> <!-- End FreeStockCharts.com WatchList Widget -->
+	
+	</div>
+	
+	
+	<div class="tablehead-main2">
+		<h2>Top Headlines for {{ time }}></h2>
+	</div>
+	
+		<div class="tablehead-main">
+			<div class="container-news_main2">
+				<ul>
+					{% for item in listz %}
+					<li><a href="{{ item.1 }}"><strong>{{ item.0 }}</strong></a></li>
+					<li style="font-size: 10px;">{{ item.3 }}</li>
+					<li><strong><em style="font-size: 9px;">{{ item.2 }}</em></strong></li>
+					{% endfor %}
+				</ul>
+				<h5 style="padding-left: 2%;"><a href="/gshares/industry/">More Top Headlines></a></h5>
+			</div>
+		</div>
+	
+	<div class="table-main">
+			<div class="feedgrabbr_widget" id="fgid_7572f8ffdf45783e8ddaf322a"></div>
+			<script> if (typeof(fg_widgets)==="undefined") fg_widgets = new Array();fg_widgets.push("fgid_7572f8ffdf45783e8ddaf322a");</script>
+			<script src='http://www.feedgrabbr.com/widget/fgwidget.js'></script>
+	</div>
+	<div class="tablehead-main3">
+	<a href="/gshares/forums/"><img src="{% static 'img/ganjaforum2.png' %}" style="width: 630px; height: 110px;"></a>
+	</div>
+	
+	<div class="tablehead-main">
+	<h2 style="font-family: 'Titillium Web', sans-serif;">Marijuana Stocks (Ranked by Market Capitalization)></h2>
+	</div>
+		
+		<div class="table-splash">
+			<table style="align: center;">
+				<thead colspan="6">
+				<th style="text-align: center;">Ticker</th>
+				<th style="text-align: left;">Company</th>
+				<th>Price ($)</th>
+				<th>Market Cap. ($ m)</th>
+				<th>52 Week Hi ($)</th>
+				<th>52 Week Lo ($)</th>
+				<th>Link</th>
+			</thead>
+			<tbody>			
+				{% for item in listr %}
+				<tr>
+					<td style="text-align: center;">{{ item.0 }}</td>
+					<td>{{ item.1 }}</td>
+					<td style="text-align: center;">{{ item.5 }}</td>
+					<td style="text-align: center;">{{ item.2 }}</td>
+					<td style="text-align: center;">{{ item.3 }}</td>
+					<td style="text-align: center;">{{ item.4 }}</td>
+					<td id="tablego"><Strong><a href="/gshares/{{ item.0 }}/">GO</a></strong></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+			</table>
+		</div>
+	
+	
+	<div class="rightover-main">
+		<div class="container-news_main">
+		<h3>Recent Stock News></h3>
+	<ul>
+	{% for item in lists %}
+		<li><a href="{{ item.1 }}"><strong>{{ item.0 }}</strong></a></li>
+		<li>{{ item.3 }}</li>
+		<li><strong><em style="font-size: 9px;">{{ item.2 }}</em></strong></li>
+		<br>
+	{% endfor %}
+	</ul>
+	<h5 style="padding-left: 2%;"><a href="/gshares/news/">More Stock News></a></h5>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+{{ boldmessage }}
+	
+		
+{% endblock content %}

@@ -1,0 +1,31 @@
+{% extends 'gshares/base.html' %}
+
+{% load static %}
+
+{% block title %}Twitter{% endblock %}
+
+{% block content %}
+
+<head>
+	<link href="{% static 'css/main2.css' %}" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans Narrow:400,700"> -->
+	<link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+</head>
+
+<h1><strong>Twitter Feeds></strong></h1>
+
+
+	<div id="twitterleftcolumn">
+
+		<a class="twitter-timeline"  href="https://twitter.com/GanjaShares/lists/follows" data-widget-id="538832878243545088">Tweets from https://twitter.com/GanjaShares/lists/follows</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+    <div id="twitterrightcolumn">
+          
+        <a class="twitter-timeline"  href="https://twitter.com/GanjaShares" data-widget-id="538832627814244352">Tweets by @GanjaShares</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>  
+<h3 style="color: white;"><---end---></h3>
+
+
+{% endblock content %}

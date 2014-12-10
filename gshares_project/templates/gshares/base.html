@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+{% load static %}
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class=" js no-touch" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>GanjaShares</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your page description here">
+    <meta name="author" content="">
+    <!-- css -->
+    <!-- <link href="static/css/main.css" rel="stylesheet"> -->
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+</head>
+<body>
+<!-- <div style="border: 1px solid black; height: 150px; display: inline-block; background-color: #f61414; clear: right;">
+	<script>
+  	(function() {
+    	var cx = '016491741827416060031:i5mipkdr_2m';
+    	var gcse = document.createElement('script');
+    	gcse.type = 'text/javascript';
+    	gcse.async = true;
+    	gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        	'//www.google.com/cse/cse.js?cx=' + cx;
+    	var s = document.getElementsByTagName('script')[0];
+    	s.parentNode.insertBefore(gcse, s);
+  	})();
+  	</script>
+	<gcse:search></gcse:search>
+</div> -->
+<div style="background:#f61414; font-size:52px; text-align:center; line-height:50px; color:#FFF; font-weight:bold;">
+	<img src="{% static 'img/gshareslogo2.png' %}" style="margin-top: 0px; width: 500px; height: 150px;">
+</div>	
+	<!-- start header -->
+	<header>	
+		<div class="container">
+				<div class="navbar navbar-static-top">
+					<div class="navigation">
+						<nav>
+						<ul class="nav topnav bold">
+							<li class="dropdown active">
+							<a href="/gshares/index/">Home <!-- <i class="icon-angle-down"></i> --></a> <!--
+							<ul class="dropdown-menu bold">
+								<li><a href="#">Homepage 2</a></li>
+								<li><a href="#">Homepage 3</a></li>
+								<li><a href="#">Homepage 4</a></li>
+							</ul> -->
+							</li>
+							<li class="dropdown">
+							<a href="/gshares/overview/">Stocks <i class="icon-angle-down"></i></a>
+							<ul style="display: none;" class="dropdown-menu bold">
+								<li><a href="/gshares/overview/">Overview</a></li>
+								<li><a href="#"><em>Alphabetical Listings:</em></a></li>
+								<li class="dropdown"><a href="#">List - 1 <i class="icon-angle-right"></i></a>
+								<ul style="display: none;" class="dropdown-menu sub-menu-level1 bold">
+									<li><a href="/gshares/AERO/">$AERO: Aerogrow</a></li>
+									<li><a href="/gshares/AGTK/">$AGTK: Agritek</a></li>
+									<li><a href="/gshares/ATTBF/">$ATTBF: Abattis Bioctl.</a></li>
+									<li><a href="/gshares/AVTC/">$AVTC: AVT, Inc.</a></li>
+									<li><a href="/gshares/BRDT/">$BRDT: BreedIT</a></li>
+									<li><a href="/gshares/CANL/">$CANL: CannLabs</a></li>
+									<li><a href="/gshares/CANV/">$CANV: CannaVEST</a></li>
+									<li><a href="/gshares/CBDS/">$CBDS: Cannabis Sativa</a></li>
+									<li><a href="/gshares/CBGI/">$CBGI: CannaBusiness</a></li>
+									<li><a href="/gshares/CBIS/">$CBIS: Cannabis Science</a></li>	
+								</ul>
+								</li>								
+								<li class="dropdown"><a href="#">List - 2 <i class="icon-angle-right"></i></a>
+								<ul style="display: none;" class="dropdown-menu sub-menu-level1 bold">
+									<li><a href="/gshares/CGRW/">$CGRW: CannaGrow</a></li>
+									<li><a href="/gshares/CHUM/">$CHUM: Chuma Hldgs.</a></li>
+									<li><a href="/gshares/CNBX/">$CNBX: Cannabics Pharm.</a></li>
+									<li><a href="/gshares/EAPH/">$EAPH: Easton Pharm.</a></li>
+									<li><a href="/gshares/EDXC/">$EDXC: ENDEXX Corp.</a></li>
+									<li><a href="/gshares/ENDO/">$ENDO: Omnicanna</a></li>
+									<li><a href="/gshares/ENRT/">$ENRT: Enertopia</a></li>
+									<li><a href="/gshares/ERBB/">$ERBB: American Green</a></li>
+									<li><a href="/gshares/FITX/">$FITX: Creative Edge Nutr.</a></li>
+									<li><a href="/gshares/FULL/">$FULL: Full Circle Cap.</a></li>
+
+								</ul>
+								</li>
+								<li class="dropdown"><a href="#">List - 3 <i class="icon-angle-right"></i></a>
+								<ul style="display: none;" class="dropdown-menu sub-menu-level1 bold">
+									<li><a href="/gshares/FWDG/">$FWDG: FutureWorld</a></li>
+									<li><a href="/gshares/GBLX/">$GBLX: Growblox Sciences</a></li>
+									<li><a href="/gshares/GRCU/">$GRCU: Green Cures</a></li>
+									<li><a href="/gshares/GRNH/">$GRNH: GreenGro Tech.</a></li>
+									<li><a href="/gshares/GWPH/">$GWPH: GW Pharm.</a></li>
+									<li><a href="/gshares/HEMP/">$HEMP: Hemp Inc.</a></li>
+									<li><a href="/gshares/HMKTF/">$HMKTF: Highmark Mktg.</a></li>
+									<li><a href="/gshares/ICBU/">$ICBU: IMD Companies</a></li>
+									<li><a href="/gshares/IMLFF/">$IMLFF: InMed Pharma.</a></li>
+									<li><a href="/gshares/LGBI/">$LGBI: Cannabiz Mobile</a></li>
+								</ul>
+								</li>
+								<li class="dropdown"><a href="#">List - 4 <i class="icon-angle-right"></i></a>
+								<ul style="display: none;" class="dropdown-menu sub-menu-level1 bold">
+									<li><a href="/gshares/LVVV/">$LVVV: Livewire</a></li>
+									<li><a href="/gshares/MCIG/">$MCIG: mCig, Inc.</a></li>
+									<li><a href="/gshares/MDBX/">$MDBX: Medbox, Inc.</a></li>
+									<li><a href="/gshares/MDCN/">$MDCN: Medican</a></li>
+									<li><a href="/gshares/MJMJ/">$MJMJ: The MaryJane Grp.</a></li>
+									<li><a href="/gshares/MJNA/">$MJNA: Medical Marijuana</a></li>
+									<li><a href="/gshares/MJNE/">$MJNE: MJ Holdings</a></li>
+									<li><a href="/gshares/MNTR/">$MNTR: Mentor Capital</a></li>
+									<li><a href="/gshares/MYEC/">$MYEC: MyECheck</a></li>
+									<li><a href="/gshares/NDEV/">$NDEV: Novus</a></li>
+								</ul>
+								</li>						
+								<li class="dropdown"><a href="#">List - 5 <i class="icon-angle-right"></i></a>
+								<ul style="display: none;" class="dropdown-menu sub-menu-level1 bold">
+									<li><a href="/gshares/NTRR/">$NTRR: Neutra Corp.</a></li>
+									<li><a href="/gshares/NVLX/">$NVLX: Nuvilex</a></li>
+									<li><a href="/gshares/PHOT/">$PHOT: Growlife</a></li>
+									<li><a href="/gshares/PLPL/">$PLPL: Plandai Bio.</a></li>
+									<li><a href="/gshares/PMCM/">$PMCM: Primco Mngmt.</a></li>
+									<li><a href="/gshares/QEDN/">$QEDN: QED Connect</a></li>
+									<li><a href="/gshares/REFG/">$REFG: Medical Cann.</a></li>
+									<li><a href="/gshares/RSSFF/">$RSSFF: Affinor Growers</a></li>
+									<li><a href="/gshares/SING/">$SING: SinglePoint</a></li>
+									<li><a href="/gshares/SPRWF/">$SPRWF: Supreme Phrma.</a></li>
+								</ul>
+								</li>
+								<li class="dropdown"><a href="#">List - 6 <i class="icon-angle-right"></i></a>
+								<ul style="display: none;" class="dropdown-menu sub-menu-level1 bold">
+									<li><a href="/gshares/SRNA/">$SRNA: Surna Inc.</a></li>
+									<li><a href="/gshares/STEV/">$STEV: Stevia Corp.</a></li>
+									<li><a href="/gshares/TAUG/">$TAUG: Tauriga Sciences</a></li>
+									<li><a href="/gshares/THCZ/">$THCZ: Totally Hemp</a></li>
+									<li><a href="/gshares/TRTC/">$TRTC: Terra Tech</a></li>
+									<li><a href="/gshares/TURV/">$TURV: Two Rivers</a></li>
+									<li><a href="/gshares/UPOT/">$UPOT: Indie Growers</a></li>
+									<li><a href="/gshares/VAPO/">$VAPO: Vaporin</a></li>
+									<li><a href="/gshares/VPOR/">$VPOR: Vapor Group</a></li>
+									<li><a href="/gshares/VAPE/">$VAPE: Vape Hldgs.</a></li>
+								</ul>
+								</li>	
+								
+							</ul>
+							</li>
+							
+							<li>
+							<a href="/gshares/forums/">Forums </a>
+							</li>
+							
+							
+							<li class="dropdown">
+							<a href="#">News & Articles <i class="icon-angle-down"></i></a>
+							<ul class="dropdown-menu bold">
+								<li><a href="/gshares/news/">Stock News</a></li>
+								<li><a href="/gshares/industry/">Industry News</a></li>
+								<li><a href="">Articles (Coming soon)</a></li> -->
+							</ul>
+							</li>	
+							
+							<li class="dropdown">
+							<a href="">Tools <i class="icon-angle-down"></i></a>
+							<ul class="dropdown-menu bold">
+								<li><a href="/gshares/twitter/">Twitter</a></li>
+								<li><a href="/gshares/charts/">Charting</a></li> <!--
+								<li><a href="/gshares/chat/"></a></li> -->
+							</ul>
+							</li>
+							
+												
+							<!-- <li class="dropdown">
+							<a href="/gshares/charts/">Charting <i class="icon-angle-down"></i></a>
+							<ul style="display: none;" class="dropdown-menu bold">
+								<li><a href="#">Portfolio 2 columns</a></li>
+								<li><a href="#">Portfolio 3 columns</a></li>
+								<li><a href="#">Portfolio 4 columns</a></li>
+								<li><a href="#">Portfolio detail</a></li>
+							</ul>
+							</li> -->
+																								
+							<li class="dropdown">
+							<a href="/gshares/advertise/">Advertise <!-- <i class="icon-angle-down"> --> </i></a> <!--
+							<ul style="display: none;" class="dropdown-menu bold">
+								<li><a href="#">Portfolio 2 columns</a></li>
+								<li><a href="#">Portfolio 3 columns</a></li>
+								<li><a href="#">Portfolio 4 columns</a></li>
+								<li><a href="#">Portfolio detail</a></li>
+							</ul> -->
+							</li>
+			
+							<li>
+							<a href="/gshares/contact/">Contact Us</a>
+							</li>
+			
+			
+							
+							<li class="dropdown">
+							<a href="/gshares/about/">About <!-- <i class="icon-angle-down"></i> --></a> <!--
+							<ul class="dropdown-menu bold">
+								<li><a href="#">Blog left sidebar</a></li>
+								<li><a href="#">Blog right sidebar</a></li>
+								<li><a href="#">Post left sidebar</a></li>
+								<li><a href="#">Post right sidebar</a></li>
+							</ul> -->
+							</li>
+
+						</ul>
+						</nav>
+					</div>
+					<!-- end navigation -->
+				</div>
+			</div>
+			</div>
+		</div>
+	</header>	
+	<!-- end header -->
+	{% block content %}
+	{% endblock %}
+        
+        <!-- Primary Footer -->
+<div class="footer-nav"> 
+	<footer>
+        <p><center>&copy; 2014 GanjaShares.com &middot; <a href="/gshares/privacy/">Privacy Policy</a> &middot; <a href="/gshares/disclaimer/">Disclaimer</a> &middot; <a href="/gshares/terms/">Terms & Conditions</a></center></p>
+    </footer>
+</div>	
+	
+
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/js/jquery.js"></script>
+	<script src="/static/js/custom.js"></script> 
+	<script src="/static/js/jQuery v1.7.1.js"></script>
+	<!-- <script src="{% static 'js/custom.js' %}"></script>
+	<script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/jQuery v1.7.1.js' %}"></script> -->    
+	</body>
+</html>

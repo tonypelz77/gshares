@@ -1,0 +1,64 @@
+{% extends 'gshares/base.html' %}
+
+{% load static %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+
+<head>
+	<link href="{% static 'css/main2.css' %}" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans Narrow:400,700"> -->
+	<link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+</head>
+
+<h1><strong>Contact Us></strong></h1>
+
+	<div class="container-gen">
+		
+		<p><strong>GanjaShares contact information:</strong></p>
+
+		<p style="padding-left: 2%;">
+    		General inquiries and comments:     [   ]@ganjashares.com<br>
+			Advertise on GanjaShares:           advertise@ganjashares.com<br>
+			Site technical problems:            webmaster@ganjashares.com<br>
+			Public relations:                   pr@ganjashares.com<br>
+			<br>
+			<strong>Mailing address:</strong><br><br>
+			2443 S University Blvd., Suite 1234<br>
+			Denver, Colorado<br>
+			80210<br>
+		</p>
+	
+	
+	
+	<style>
+      #map-canvas {
+        width: 980px;
+        height: 400px;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map-canvas');
+        var mapOptions = {
+          center: new google.maps.LatLng(39.683274, -104.960836),
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+    <div id="map-canvas"></div>
+</div>
+
+	<h2 style="color: white;">.<h2>
+	<h2 style="color: white;">.<h2>
+	<h2 style="color: white;">.<h2>
+	<h2 style="color: white;">.<h2>
+	<h2 style="color: white;">.<h2>
+	<h2 style="color: white;">.<h2>
+{% endblock content %}
